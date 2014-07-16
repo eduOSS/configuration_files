@@ -1,0 +1,1 @@
+/home/leo/Documents/python/git/vim/dotfiles/_bashrc
