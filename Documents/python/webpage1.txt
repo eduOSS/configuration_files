@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="zh-hans" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="zh-hans" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="zh-hans" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="zh-hans" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="zh-hans" dir="ltr"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="http://www.openinnovation.cn/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>数据转换 | 科研信息服务开放创新竞赛</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+  <style>@import url("http://www.openinnovation.cn/modules/system/system.base.css?n1yg9w");
+@import url("http://www.openinnovation.cn/modules/system/system.messages.css?n1yg9w");
+@import url("http://www.openinnovation.cn/modules/system/system.theme.css?n1yg9w");</style>
+<style>@import url("http://www.openinnovation.cn/sites/all/modules/contrib/date/date_api/date.css?n1yg9w");
+@import url("http://www.openinnovation.cn/modules/field/theme/field.css?n1yg9w");
+@import url("http://www.openinnovation.cn/modules/node/node.css?n1yg9w");
+@import url("http://www.openinnovation.cn/modules/user/user.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/modules/contrib/views/css/views.css?n1yg9w");</style>
+<style>@import url("http://www.openinnovation.cn/sites/all/modules/contrib/ctools/css/ctools.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/modules/contrib/panels/css/panels.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/modules/contrib/video/css/video.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/modules/contrib/panels/plugins/layouts/threecol_25_50_25/threecol_25_50_25.css?n1yg9w");</style>
+<style>@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/normalize.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/wireframes.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/layouts/responsive-sidebars.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/tabs.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/pages.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/blocks.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/navigation.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/views-styles.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/nodes.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/comments.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/forms.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/fields.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/las.css?n1yg9w");
+@import url("http://www.openinnovation.cn/sites/all/themes/dasaitheme/css/print.css?n1yg9w");</style>
+  <script src="http://www.openinnovation.cn/misc/jquery.js?v=1.4.4"></script>
+<script src="http://www.openinnovation.cn/misc/jquery.once.js?v=1.2"></script>
+<script src="http://www.openinnovation.cn/misc/drupal.js?n1yg9w"></script>
+<script src="http://www.openinnovation.cn/sites/default/files/languages/zh-hans_zj16sqZQb7PFqCCBwNwUyaMnv8VK7SfADHADjUg0kNc.js?n1yg9w"></script>
+<script src="http://www.openinnovation.cn/sites/all/modules/contrib/panels/js/panels.js?n1yg9w"></script>
+<script src="http://www.openinnovation.cn/sites/all/modules/contrib/video/js/video.js?n1yg9w"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"dasaitheme","theme_token":"EPBIHWtFbOzB7Uil1mJ7yQ6h6qKATlGm8Rw6j1t5u5s","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_zj16sqZQb7PFqCCBwNwUyaMnv8VK7SfADHADjUg0kNc.js":1,"sites\/all\/modules\/contrib\/panels\/js\/panels.js":1,"sites\/all\/modules\/contrib\/video\/js\/video.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/video\/css\/video.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/threecol_25_50_25\/threecol_25_50_25.css":1,"sites\/all\/themes\/dasaitheme\/system.menus.css":1,"sites\/all\/themes\/dasaitheme\/css\/normalize.css":1,"sites\/all\/themes\/dasaitheme\/css\/wireframes.css":1,"sites\/all\/themes\/dasaitheme\/css\/layouts\/responsive-sidebars.css":1,"sites\/all\/themes\/dasaitheme\/css\/page-backgrounds.css":1,"sites\/all\/themes\/dasaitheme\/css\/tabs.css":1,"sites\/all\/themes\/dasaitheme\/css\/pages.css":1,"sites\/all\/themes\/dasaitheme\/css\/blocks.css":1,"sites\/all\/themes\/dasaitheme\/css\/navigation.css":1,"sites\/all\/themes\/dasaitheme\/css\/views-styles.css":1,"sites\/all\/themes\/dasaitheme\/css\/nodes.css":1,"sites\/all\/themes\/dasaitheme\/css\/comments.css":1,"sites\/all\/themes\/dasaitheme\/css\/forms.css":1,"sites\/all\/themes\/dasaitheme\/css\/fields.css":1,"sites\/all\/themes\/dasaitheme\/css\/las.css":1,"sites\/all\/themes\/dasaitheme\/css\/print.css":1}}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+  </head>
+<body class="html not-front not-logged-in no-sidebars page-opentools page-opentools-function page-opentools-function- page-opentools-function-58 section-opentools page-views" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      
+<header id="header" role="banner"><div class="layout-wrapper">
+
+  
+  
+  
+  
+</div></header>
+
+<div id="navigation"><div class="layout-wrapper">
+
+  
+    <div class="region region-navigation">
+    <div id="block-system-main-menu" class="block block-system block-menu first odd" role="navigation">
+
+        <h2 class="block-title">主菜单</h2>
+    
+  <div class="block-content">
+    <ul class="menu"><li class="first leaf"><a href="/" title="">首页</a></li>
+<li class="leaf"><a href="/about">关于大赛</a></li>
+<li class="leaf"><a href="/works" title="">参考案例</a></li>
+<li class="leaf"><a href="/opendata/subject" title="">开放数据</a></li>
+<li class="leaf"><a href="/opentools/function" title="">开放工具</a></li>
+<li class="leaf"><a href="/contact-us">联系我们</a></li>
+<li class="leaf"><a href="/winner">获奖作品</a></li>
+<li class="last leaf"><a href="/faq">常见问题</a></li>
+</ul>  </div>
+
+</div><!-- /.block -->
+<div id="block-system-user-menu" class="block block-system block-menu last even" role="navigation">
+
+        <h2 class="block-title">User menu</h2>
+    
+  <div class="block-content">
+    <ul class="menu"><li class="first last leaf"><a href="/user/login" title="">登录</a></li>
+</ul>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+
+</div></div><!-- /#navigation -->
+
+<div id="page"><div class="layout-wrapper">
+
+  <div id="main">
+
+    <div id="content" class="column" role="main">
+            <nav class="breadcrumb" role="navigation"><h2 class="element-invisible">你在这里</h2><ol><li><a href="/">首页</a> › </li><li><a href="/opentools/function">开放工具</a> › </li><li>数据转换</li></ol></nav>      <a id="main-content"></a>
+                    <h1 class="title" id="page-title">数据转换</h1>
+                                          
+<div id="block-block-21" class="block block-block first odd">
+
+      
+  <div class="block-content">
+    <form id="opendata-custom-search-form" method="get" action="/opentools/search" style="width: 350px; margin: 0px auto;">
+  <input id="search-box" type="text" name="search_api_views_fulltext" style="margin-right: 0.5em; width: 200px;" /><input id="search-submit" type="submit" value="检索" /></form>  </div>
+
+</div><!-- /.block -->
+<div id="block-panels-mini-opentools-function-navi" class="block block-panels-mini even">
+
+      
+  <div class="block-content">
+    <div class="panel-display panel-3col clearfix" id="mini-panel-opentools_function_navi">
+  <div class="panel-panel panel-col-first">
+    <div class="inside"><div class="panel-pane pane-block pane-block-17 pane-block opendata-type-navi" >
+  
+      
+  
+  <div class="pane-content">
+    <a href="/opentools/function">按功能浏览</a> <a href="/opentools">按字顺浏览</a>  </div>
+
+  
+  </div>
+</div>
+  </div>
+
+  <div class="panel-panel panel-col">
+    <div class="inside"><div class="panel-pane pane-block pane-dasai-opentools-function-navi pane-dasai opentools_function_navi" >
+  
+      
+  
+  <div class="pane-content">
+    <a href="/opentools/function/58" class="active">数据转换</a><a href="/opentools/function/61">可视化</a><a href="/opentools/function/59">统计分析</a><a href="/opentools/function/62">数据计算</a><a href="/opentools/function/60">信息抽取</a><a href="/opentools/function/63">其它</a>  </div>
+
+  
+  </div>
+</div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"><div class="panel-pane pane-block pane-block-20 pane-block btn_recommend" >
+  
+      
+  
+  <div class="pane-content">
+    <div><a class="btn-yellow" href="/node/add/opentools">我要推荐</a></div>  </div>
+
+  
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+
+</div><!-- /.block -->
+
+
+<div class="view view-opentools-v2 view-id-opentools_v2 view-display-id-opendata_subject_list_page opendata-2-col-list view-dom-id-290348bb06346813dd065a6fe0e35ea0">
+            <div class="view-header">
+      <div class="fl-header">
+  <span class="subject-name">数据转换</span>
+  <span class="first-letter-count">（共34条）</span>
+</div>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.esri.com/products" target="_blank">ArcView</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9660">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://simile.mit.edu/wiki/Babel" target="_blank">babel</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9506">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://cdf.gsfc.nasa.gov/html/Version/V3500/dttools.html" target="_blank">CDF Data Format Translation Tools</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9539">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://cdf.gsfc.nasa.gov/html/Version/V3500/sw_and_docs.html" target="_blank">CDF Library</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9538">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://soliton.vm.bytemark.co.uk/pub/jjg/code/cptutils-1.46.tar.gz" target="_blank">cptutils</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9545">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.datasciencetoolkit.org/developerdocs#text2sentences" target="_blank">Data Science Toolkit</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9562">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://digitizer.sourceforge.net/" target="_blank">Engauge Digitizer</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9775">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.exelisvis.com/ProductsServices/ENVIPlatform.aspx" target="_blank">ENVI</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9700">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://eword.sourceforge.net" target="_blank">eWord</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9405">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-10 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.esrf.eu/computing/scientific/FIT2D/" target="_blank">Fit-2D</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9580">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="ftp://ftp.remotesensing.org/gdal" target="_blank">GDAL(Geospatial Data Abstraction Library)</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9762">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-12 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.geosetter.de/en/download/" target="_blank">GeoSetter</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9844">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://getdata-graph-digitizer.com/download.php" target="_blank">GetData</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9569">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-14 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.gpsbabel.org/download.html" target="_blank">GPSBabel</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9845">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="https://github.com/ISA-tools/graph2tab" target="_blank">graph2tab</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9703">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-16 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://rsb.info.nih.gov/ij/download.html" target="_blank">ImageJ</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9657">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-17 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.imagemagick.org/script/download.php" target="_blank">ImageMagick</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9860">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-18 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://chemdata.nist.gov/mass-spc/ms-search/Library_conversion_tool.html" target="_blank">LIB2NIST</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9567">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-19 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.ssicentral.com/lisrel/downloads.html" target="_blank">Lisrel</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9487">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-20 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.mapinfo.com/" target="_blank">MapInfo</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9661">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-21 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://mestrelab.com/software/mnova-suite/download/" target="_blank">MestReNova(Mnova) </a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9687">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-22 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.ngdc.noaa.gov/eds/tds/" target="_blank">ncISO</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9891">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-23 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://openbabel.org/wiki/Get_Open_Babel" target="_blank">Open Babel</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9529">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-24 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.opencalais.com/APIkey" target="_blank">OpenCalais Web Service API</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9401">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-25 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.passcal.nmt.edu/content/software/package-downloads" target="_blank">PASSCAL</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9550">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-26 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://simile.mit.edu/wiki/RDFizers" target="_blank">RDFizers</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9505">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-27 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.sas.com/technologies/analytics/statistics/" target="_blank">SAS</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9443">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-28 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.smartdraw.com/" target="_blank">SmartDraw</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9445">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-29 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.techsmith.com/snagit.html" target="_blank">SnagIT</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9598">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-30 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://specifysoftware.org/content/download" target="_blank">Specify 6</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9929">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-31 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www-01.ibm.com/software/analytics/spss/downloads.html" target="_blank">SPSS Amos</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9486">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-32 views-row-even">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.tableausoftware.com/products/desktop" target="_blank">Tableau</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9450">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-33 views-row-odd">
+      
+  <span class="views-field views-field-title">        <span class="field-content">Web Accessible Folder (WAF) Tools</span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9945">详细信息</a></span>  </span>  </div>
+  <div class="views-row views-row-34 views-row-even views-row-last">
+      
+  <span class="views-field views-field-title">        <span class="field-content"><a href="http://www.cs.waikato.ac.nz/ml/weka/downloading.html" target="_blank">Weka</a></span>  </span>  
+  <span class="views-field views-field-nothing">        <span class="field-content"><a href="http://www.openinnovation.cn/node/9494">详细信息</a></span>  </span>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div><!-- block__no_wrapper -->
+<!-- region__no_wrapper -->
+          </div><!-- /#content -->
+
+    
+    
+  </div><!-- /#main -->
+
+</div></div><!-- /.layout-wrapper #page -->
+
+<div id="footer-wrapper"><div class="layout-wrapper">
+    <footer id="footer" class="region region-footer">
+    <div id="block-block-5" class="block block-block first last odd">
+
+      
+  <div class="block-content">
+    <p style="text-align: center;"><a href="/about">关于大赛</a> | <a href="/contact-us">联系我们</a> | <a href="/use-term">使用条款</a> | 法律声明</p>
+<p style="text-align: center;">版权所有© 2013 中国科学院国家科学图书馆  京ICP备05002861号-3  <br />地址：北京中关村北四环西路33号 邮政编码：100190  联系电话：010-82626683</p>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffe917f274dbe5c41eff3f5031d30ecd3' type='text/javascript'%3E%3C/script%3E"));
+
+//--><!]]>
+</script>  </div>
+
+</div><!-- /.block -->
+  </footer><!-- region__footer -->
+  </div></div>
+  </body>
+</html>
+
